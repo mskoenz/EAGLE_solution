@@ -10,6 +10,7 @@ note: PD0-PD7 is Digital Pin 0-7
 
 note: has 4 pins but 2 each are already connected (you know this from the button, right?)
       use as INPUT_PULLUP, meaning one side to GND, other side to Digital Pin of the ATMEGA
+      !one button has to connect to Pin 2 or Pin 3 bc of the interrupt to return from sleep
 
 9 x DUOLED-RG-C
 
