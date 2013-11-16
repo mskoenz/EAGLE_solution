@@ -41,7 +41,7 @@ note: to connect the piezo element
 
 1 x DIL8S
 
-note: this is used to mount the crystall and the caps (so that you can take it out again, like the ICs). I recommend the following (or similar) layout. You don't need to add crystals or caps
+note: this is used to mount the crystal and the caps (so that you can take it out again, like the ICs). I recommend the following (or similar) layout. You don't need to add crystals or caps
 
 XTAL1-+----O crystal O----+-XTAL2
       | x--O nothing O--x |
