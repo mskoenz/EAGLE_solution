@@ -1,0 +1,68 @@
+The following parts are needed in the TicTacToe project:
+
+1 x ATMEGA328P_PDIP
+
+note: PD0-PD7 is Digital Pin 0-7
+      PB0-PB5 is Digital Pin 8-13 
+      PC0-PC5 is Analog  Pin 0-5
+
+3 x TAC_SWITCHPTH
+
+note: has 4 pins but 2 each are already connected (you know this from the button, right?)
+      use as INPUT_PULLUP, meaning one side to GND, other side to Digital Pin of the ATMEGA
+      !one button has to connect to Pin 2 or Pin 3 bc of the interrupt to return from sleep
+
+9 x DUOLED-RG-C
+
+note: has common cathode (VCC)
+      middle part to VCC
+      outer pins to ATMEGA or PCF8574
+
+1 x PCF8574P
+
+note: VSS == GND
+      INT doesn't need to be attached
+      SCL/SDA needs to go to the ATMEGA
+      set A0, A1, A2 to GND
+
+1 x M02PTH
+
+note: to connect the battery / one is GND the other is VCC
+
+1 x M03PTH
+
+note: to connect RX/TX/RST (pin 0, pin 1, pin reset) in order to program the ATMEGA on the board
+
+1 x M04PTH
+
+note: to connect the piezo element
+      don't connect the middle two contacts
+      one of the outer goes to GND or VCC and the other to a Digital Pin on the ATMEGA
+
+1 x DIL8S
+
+note: this is used to mount the crystal and the caps (so that you can take it out again, like the ICs). I recommend the following (or similar) layout. You don't need to add crystals or caps
+
+XTAL1-+----O crystal O----+-XTAL2
+      | x--O nothing O--x |
+      |    O-+ cap   O----+
+      +----O | cap   O--+---GND
+             +----------+
+
+final notes:
+
+In schematic:
+-place parts with "Add"
+-connect pins with "Net" ("Wire" works also but I don't recommend)
+-name your lines with "Name" (i.e. GND)
+-if you want to display the name of a line use "Label"
+-it's enough if two lines have the same name, the don't need to be connected visible in the schematic
+
+In board: (file -> switch to board)
+-"Route" on the bottom layer (most/all your connections should be blue not red) bc. it's easier to solder afterwards
+-Correct bad "Route" with "Ripup"
+-try to minimize the use of "Via" (changes from to to bottom)
+-you can use the default setting with trackwidth 0.016 inch and the default grid spacing
+-route all but the LEDs with the schematic-board connected
+-at the end move the schematic to another folder and "Signal" and "Route" the LED on the board
+-alternatively: just use "Wire" instead of "Route" in the board modus, so you don't need do disconnect the schematic/board
