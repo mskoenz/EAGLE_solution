@@ -2687,6 +2687,10 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="0" y1="40.64" x2="0" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND@2"/>
 <wire x1="0" y1="43.18" x2="5.08" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="GND@1"/>
+<wire x1="5.08" y1="45.72" x2="0" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="0" y1="45.72" x2="0" y2="43.18" width="0.1524" layer="91"/>
+<junction x="0" y="43.18"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VSS"/>
