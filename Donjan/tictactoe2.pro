@@ -2,8 +2,8 @@ EAGLE AutoRouter Statistics:
 
 Job           : /home/bryonak/c/arduino_crash_course/EAGLE_solution/Donjan/tictactoe2.brd
 
-Start at      : 14:46:37 (20.11.13)
-End at        : 14:46:37 (20.11.13)
+Start at      : 15:00:48 (20.11.13)
+End at        : 15:00:48 (20.11.13)
 Elapsed time  : 00:00:00
 
 Signals       :    32   RoutingGrid: 50 mil  Layers: 2
