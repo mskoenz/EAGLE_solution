@@ -66,3 +66,59 @@ In board: (file -> switch to board)
 -route all but the LEDs with the schematic-board connected
 -at the end move the schematic to another folder and "Signal" and "Route" the LED on the board
 -alternatively: just use "Wire" instead of "Route" in the board modus, so you don't need do disconnect the schematic/board
+
+Finish (all in board modus):
+-Adjust gray dimension square to fit the project tightly (smaller board->cheaper)
+-If there is no dimension square, use "Rectangle" and draw in the dimension layer (not top or bottom)
+-use "Polygon" and draw polygons on top and/or bottom that follow the gray dimension square (a polygon is only valid if the end meets the start exactly)
+-Click on the "DRC" tool
+-Click on load… and load the proper design rules i.e. bastli/bastli.dru
+-You don't need to "check", just "select/apply"
+-Now use the "Autoroute" tool and load bastli/bastli.ctl
+-Hit "Ok". The polygons should now be gone and all empty areas filled with top or bottom color
+
+Export:
+-click file/CAM-Processor
+-Export the different layers as follows:
+
+TOP:
+device:                GERBER_RS274X
+only selected Layers:  Top, Pads, Vias
+filename (convention): TOP
+
+hit execute job (TOP and TOP.gpi are now created->TOP.gpi is not important)
+
+BOTTOM:
+device:                GERBER_RS274X
+only selected Layers:  Bottom, Pads, Vias
+filename (convention): BOTTOM
+
+hit execute job (BOTTOM and BOTTOM.gpi are now created->BOTTOM.gpi is not important)
+
+OUTLINE:
+device:                GERBER_RS274X
+only selected Layers:  Dimension
+filename (convention): OUTLINE
+
+hit execute job (OUTLINE and OUTLINE.gpi are now created->OUTLINE.gpi is not important)
+
+DRILL:
+device:                EXCELLON
+only selected Layers:  Drill, Holes
+filename (convention): DRILL
+
+hit execute job (DRILL and DRILL.dri are now created->DRILL.dri is not important)
+
+You need minimally a TOP or BOTTOM file as well as an OUTLINE file.
+
+Go to http://www.gerber-viewer.com/ and load your files just to double-check them…
+
+If all is ok->
+
+Order:
+-You have to be in the ETH network->VPN
+-go to https://pcb.mueslo.de/ or search for PCB-Tool on the bastli homepage and press "Order a PCB"
+-Choose Pool
+-Choose for the material FR4 35u -> copper layer is 35um thick (you can bring your own material if you need something different)
+-drag and drop the files onto the right slots on the homepage
+-add name, phone and email and order
