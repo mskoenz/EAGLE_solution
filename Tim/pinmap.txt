@@ -1,0 +1,12 @@
+Led0 = p4,p5
+Led1 = p6,p7
+Led2 = d11,d8
+Led3 = p1,p2
+Led4 = p3,d12
+Led5 = d10,d7
+Led6 = p0,a1
+Led7 = a0,d13
+Led8 = d9,d6
+But0 = d2
+But1 = d3
+But2 = d4
