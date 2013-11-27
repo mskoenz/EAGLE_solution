@@ -1,0 +1,16 @@
+
+LED1 = P7, P8
+LED2 = P9, P3
+LED3 = P7, P4		IO expander
+LED4 = P11, P12
+LED5 = AP2, AP3
+LED6 = P5, P6		IO expander
+LED7 = AP0, AP1
+LED8 = P1, P0		IO expander
+LED9 = P3, P2		IO expander
+
+BTN1 = P13
+BTN2 = P6
+BTN3 = P5
+
+Piezo = P4
