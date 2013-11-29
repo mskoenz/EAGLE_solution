@@ -1,1 +1,0 @@
-Müssen die beiden Atmega grounds miteinander verbunden sein?
