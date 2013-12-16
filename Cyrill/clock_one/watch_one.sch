@@ -2791,15 +2791,6 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="101.6" y1="40.64" x2="86.36" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PD2(INT0)"/>
-<wire x1="101.6" y1="96.52" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="43.18" x2="86.36" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="JP4" gate="G$1" pin="2"/>
-<wire x1="78.74" y1="96.52" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="JP3" gate="G$1" pin="2"/>
@@ -2815,10 +2806,10 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="53.34" y1="96.52" x2="53.34" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="JP6" gate="G$1" pin="3"/>
 <wire x1="40.64" y1="96.52" x2="53.34" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="106.68" x2="88.9" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PC0(ADC0)"/>
-<wire x1="88.9" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="106.68" x2="88.9" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="106.68" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="PD2(INT0)"/>
+<wire x1="101.6" y1="43.18" x2="86.36" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="106.68" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -2864,6 +2855,15 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="17.78" y1="-10.16" x2="35.56" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="-10.16" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
 <junction x="35.56" y="30.48"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PC0(ADC0)"/>
+<wire x1="88.9" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="JP4" gate="G$1" pin="2"/>
+<wire x1="78.74" y1="96.52" x2="88.9" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="71.12" x2="88.9" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
