@@ -2687,6 +2687,9 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <pinref part="JP3" gate="G$1" pin="1"/>
 <wire x1="121.92" y1="93.98" x2="114.3" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="U1" gate="G$1" pin="AVCC"/>
+<wire x1="38.1" y1="66.04" x2="38.1" y2="63.5" width="0.1524" layer="91"/>
+<junction x="38.1" y="63.5"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2782,23 +2785,25 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="104.14" y1="38.1" x2="86.36" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="SWAP2" class="0">
 <segment>
 <pinref part="LED11" gate="G$1" pin="C"/>
 <wire x1="121.92" y1="-7.62" x2="101.6" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="-7.62" x2="101.6" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PD3(INT1)"/>
-<wire x1="101.6" y1="40.64" x2="86.36" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="40.64" x2="104.14" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="40.64" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="PC1(ADC1)"/>
+<wire x1="104.14" y1="68.58" x2="86.36" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="SWAP1" class="0">
 <segment>
 <pinref part="JP3" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="96.52" x2="114.3" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="101.6" x2="99.06" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="101.6" x2="99.06" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PC1(ADC1)"/>
-<wire x1="99.06" y1="68.58" x2="86.36" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="101.6" x2="99.06" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="PD3(INT1)"/>
+<wire x1="99.06" y1="40.64" x2="86.36" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$18" class="0">
